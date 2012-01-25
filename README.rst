@@ -27,23 +27,24 @@ Using
 2. Install Djagno app and tell Django-Purls about your asset servers
 ::
 
-INSTALLED_APPS = (
-    ...
-    'purls',
-)
+    INSTALLED_APPS = (
+        ...
+        'purls',
+    )
 
-PURL_SERVERS = {
-    # rewrite all URLs using the purl template tag to one of the following
-    # servers
-    'default': ('assets0.example.com', 'assets1.example.com',
-            'assets2.example.com'),
-}
+    PURL_SERVERS = {
+        # rewrite all URLs using the purl template tag to one of the following
+        # servers
+        'default': ('assets0.example.com', 'assets1.example.com',
+                'assets2.example.com'),
+    }
 
 3. Profit
 
 Setup
 `````
-$ easy_install django-purls
+::
+    $ easy_install django-purls
 
 
 Supports Python 2.5 or later
