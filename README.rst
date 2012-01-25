@@ -44,6 +44,7 @@ Using
 Setup
 `````
 ::
+
     $ easy_install django-purls
 
 
