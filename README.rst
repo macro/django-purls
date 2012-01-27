@@ -48,6 +48,4 @@ Usage
                 'assets2.example.com'),
     }
 
-3. Profit
-
 
