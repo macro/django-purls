@@ -16,7 +16,16 @@ PURL_SERVERS settings.  Django-Purls uses a consistent hashing algorithm
 allowing you to add or remove servers without completely re-shuffling all
 URL mappings and still utilize browser cache.
 
-Using
+Supports Python 2.5 or later
+
+Installation
+````````````
+::
+
+    $ easy_install django-purls
+
+
+Usage
 `````
 1. Wrap your static content (ex. images) in the purl template tag.
 ::
@@ -30,44 +39,37 @@ Using
 2. Install Djagno app and tell Django-Purls about your asset servers
 ::
 
-INSTALLED_APPS = (
-    ...
-    'purls',
-)
+    INSTALLED_APPS = (
+        ...
+        'purls',
+    )
 
-PURL_SERVERS = {
-    # rewrite all URLs using the purl template tag to one of the following
-    # servers
-    'default': ('assets0.example.com', 'assets1.example.com',
-            'assets2.example.com'),
-}
-
-3. Profit
-
-Setup
-`````
-$ easy_install django-purls
-
+    PURL_SERVERS = {
+        # rewrite all URLs using the purl template tag to one of the following
+        # servers
+        'default': ('assets0.example.com', 'assets1.example.com',
+                'assets2.example.com'),
+    }
 
 """
 
-version = '0.2'
+version = '0.3'
 
 setup(
     name='django-purls',
     version=version,
     description="django-purls",
     long_description='A simple Django app to improve end-user reponse times '
-            'by transparently parellelizing download static content.',
+            'by transparently parellelizing download of static content.',
     classifiers=[
         "Programming Language :: Python",
         "Topic :: Software Development :: Libraries :: Python Modules",
         "Framework :: Django",
         "Environment :: Web Environment",
     ],
-    keywords='parallel,urls,django',
+    keywords='performance,static,content,parallel,urls,django',
     author='Neil Chintomby',
-    author_email='nchintomby@gmail.com',
+    author_email='nchintomby+django@gmail.com',
     url='http://github.com/macro/django-purls/',
     license='BSD',
     packages=find_packages(),
