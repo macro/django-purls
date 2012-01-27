@@ -13,7 +13,16 @@ PURL_SERVERS settings.  Django-Purls uses a consistent hashing algorithm
 allowing you to add or remove servers without completely re-shuffling all
 URL mappings and still utilize browser cache.
 
-Using
+Supports Python 2.5 or later
+
+Installation
+````````````
+::
+
+    $ easy_install django-purls
+
+
+Usage
 `````
 1. Wrap your static content (ex. images) in the purl template tag.
 ::
@@ -41,12 +50,4 @@ Using
 
 3. Profit
 
-Setup
-`````
-::
-
-    $ easy_install django-purls
-
-
-Supports Python 2.5 or later
 
